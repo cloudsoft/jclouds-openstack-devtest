@@ -26,6 +26,7 @@ import java.net.URI;
 import java.util.Properties;
 
 import org.jclouds.openstack.devtest.config.DevTestNamespaceAliasModule;
+import org.jclouds.openstack.keystone.v2_0.config.AuthenticationApiModule;
 import org.jclouds.openstack.keystone.v2_0.config.CredentialTypes;
 import org.jclouds.openstack.keystone.v2_0.config.KeystoneAuthenticationModule;
 import org.jclouds.openstack.keystone.v2_0.config.KeystoneAuthenticationModule.RegionModule;
@@ -86,6 +87,7 @@ public class OpenstackDevTestProviderMetadata extends BaseProviderMetadata {
                          .endpointName("identity service url ending in /v2.0/")
                          .defaultEndpoint("https://127.0.0.1:5000/v2.0/")
                          .defaultModules(ImmutableSet.<Class<? extends Module>>builder()
+                                 .add(AuthenticationApiModule.class)
                                  .add(KeystoneAuthenticationModule.class)
                                  .add(RegionModule.class)
                                  .add(NovaParserModule.class)

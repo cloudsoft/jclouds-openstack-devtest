@@ -31,7 +31,6 @@
   <packaging>bundle</packaging>
 
   <properties>
-    <jclouds-nova.version>1.9.2</jclouds-nova.version>
     <jclouds.groupId>org.apache.jclouds</jclouds.groupId>
     <test.openstack-devtest-compute.endpoint>https://127.0.0.1/v2.0/</test.openstack-devtest-compute.endpoint>
     <test.openstack-devtest-compute.api-version>2</test.openstack-devtest-compute.api-version>
@@ -48,11 +47,6 @@
     <dependency>
       <groupId>${jclouds.groupId}.api</groupId>
       <artifactId>openstack-nova</artifactId>
-      <version>${jclouds-nova.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>${jclouds.groupId}.driver</groupId>
-      <artifactId>jclouds-slf4j</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
     <dependency>
@@ -88,7 +82,7 @@
     <dependency>
       <groupId>${jclouds.groupId}.api</groupId>
       <artifactId>openstack-nova</artifactId>
-      <version>${jclouds-nova.version}</version>
+      <version>${project.parent.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
@@ -102,12 +96,6 @@
     <dependency>
       <groupId>${jclouds.groupId}.driver</groupId>
       <artifactId>jclouds-slf4j</artifactId>
-      <version>${project.parent.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>${jclouds.groupId}.driver</groupId>
-      <artifactId>jclouds-sshj</artifactId>
       <version>${project.parent.version}</version>
       <scope>test</scope>
     </dependency>
