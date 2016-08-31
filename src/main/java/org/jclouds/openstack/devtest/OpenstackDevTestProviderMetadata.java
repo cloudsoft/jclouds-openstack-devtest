@@ -78,8 +78,8 @@ public class OpenstackDevTestProviderMetadata extends BaseProviderMetadata {
    public static class Builder extends BaseProviderMetadata.Builder {
 
       protected Builder() {
-         id("openstack-devtest-compute")
-                 .name("Openstack DevTest Compute Services")
+         id("openstack-mitaka-nova")
+                 .name("OpenStack Mitaka Nova")
                  .apiMetadata(new NovaApiMetadata().toBuilder()
                          .identityName("${tenantName}:${accessKey}")
                          .credentialName("${secretKey}")
@@ -96,9 +96,9 @@ public class OpenstackDevTestProviderMetadata extends BaseProviderMetadata {
                                  .add(NovaComputeServiceContextModule.class)
                                  .build())
                          .build())
-                 .homepage(URI.create("https://wiki.openstack.org/wiki/Tuskar/Devtest"))
+                 .homepage(URI.create("https://www.openstack.org/software/mitaka/"))
                  .console(URI.create("https://127.0.0.1/horizon"))
-                 .linkedServices("openstack-devtest-compute")
+                 .linkedServices("openstack-mitaka-nova")
                  .endpoint("https://127.0.0.1/identity/v2.0/")
                  .defaultProperties(OpenstackDevTestProviderMetadata.defaultProperties());
       }
