@@ -24,22 +24,22 @@
     <artifactId>jclouds-project</artifactId>
     <version>1.9.2</version>
   </parent>
-  <groupId>io.cloudsoft.jclouds.provider</groupId>
-  <artifactId>openstack-devtest-compute</artifactId>
-  <name>jclouds Openstack DevTest provider</name>
-  <description>OpenStack Nova implementation targeted to DevTest</description>
+  <groupId>io.cloudsoft.jclouds.api</groupId>
+  <artifactId>openstack-mitaka-nova</artifactId>
+  <name>jclouds Openstack Mitaka Nova</name>
+  <description>OpenStack Nova implementation targeted to Mitaka</description>
   <packaging>bundle</packaging>
 
   <properties>
     <jclouds.groupId>org.apache.jclouds</jclouds.groupId>
-    <test.openstack-devtest-compute.endpoint>https://127.0.0.1/v2.0/</test.openstack-devtest-compute.endpoint>
-    <test.openstack-devtest-compute.api-version>2</test.openstack-devtest-compute.api-version>
-    <test.openstack-devtest-compute.build-version />
-    <test.openstack-devtest-compute.identity>FIXME_IDENTITY</test.openstack-devtest-compute.identity>
-    <test.openstack-devtest-compute.credential>FIXME_CREDENTIAL</test.openstack-devtest-compute.credential>
-    <test.openstack-devtest-compute.api-version>2</test.openstack-devtest-compute.api-version>
-    <test.openstack-devtest-compute.template />
-    <jclouds.osgi.export>org.jclouds.devtest.openstack*;version="${project.version}"</jclouds.osgi.export>
+    <test.openstack-mitaka-nova.endpoint>https://127.0.0.1/v2.0/</test.openstack-mitaka-nova.endpoint>
+    <test.openstack-mitaka-nova.api-version>2</test.openstack-mitaka-nova.api-version>
+    <test.openstack-mitaka-nova.build-version />
+    <test.openstack-mitaka-nova.identity>FIXME_IDENTITY</test.openstack-mitaka-nova.identity>
+    <test.openstack-mitaka-nova.credential>FIXME_CREDENTIAL</test.openstack-mitaka-nova.credential>
+    <test.openstack-mitaka-nova.api-version>2</test.openstack-mitaka-nova.api-version>
+    <test.openstack-mitaka-nova.template />
+    <jclouds.osgi.export>org.jclouds.openstack.devtest*;version="${project.version}"</jclouds.osgi.export>
     <jclouds.osgi.import>org.jclouds*;version="${project.version}",*</jclouds.osgi.import>
   </properties>
 
@@ -216,12 +216,12 @@
                 <configuration>
                   <threadCount>1</threadCount>
                   <systemPropertyVariables>
-                    <test.openstack-devtest-compute.endpoint>${test.openstack-devtest-compute.endpoint}</test.openstack-devtest-compute.endpoint>
-                    <test.openstack-devtest-compute.api-version>${test.openstack-devtest-compute.api-version}</test.openstack-devtest-compute.api-version>
-                    <test.openstack-devtest-compute.build-version>${test.openstack-devtest-compute.build-version}</test.openstack-devtest-compute.build-version>
-                    <test.openstack-devtest-compute.identity>${test.openstack-devtest-compute.identity}</test.openstack-devtest-compute.identity>
-                    <test.openstack-devtest-compute.credential>${test.openstack-devtest-compute.credential}</test.openstack-devtest-compute.credential>
-                    <test.openstack-devtest-compute.template>${test.openstack-devtest-compute.template}</test.openstack-devtest-compute.template>
+                    <test.openstack-mitaka-nova.endpoint>${test.openstack-mitaka-nova.endpoint}</test.openstack-mitaka-nova.endpoint>
+                    <test.openstack-mitaka-nova.api-version>${test.openstack-mitaka-nova.api-version}</test.openstack-mitaka-nova.api-version>
+                    <test.openstack-mitaka-nova.build-version>${test.openstack-mitaka-nova.build-version}</test.openstack-mitaka-nova.build-version>
+                    <test.openstack-mitaka-nova.identity>${test.openstack-mitaka-nova.identity}</test.openstack-mitaka-nova.identity>
+                    <test.openstack-mitaka-nova.credential>${test.openstack-mitaka-nova.credential}</test.openstack-mitaka-nova.credential>
+                    <test.openstack-mitaka-nova.template>${test.openstack-mitaka-nova.template}</test.openstack-mitaka-nova.template>
                   </systemPropertyVariables>
                 </configuration>
               </execution>
