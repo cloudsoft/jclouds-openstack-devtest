@@ -22,17 +22,18 @@
   <parent>
     <groupId>org.apache.jclouds</groupId>
     <artifactId>jclouds-project</artifactId>
-    <version>1.9.2</version>
+    <version>1.9.3</version>
   </parent>
   <groupId>io.cloudsoft.jclouds.api</groupId>
   <artifactId>openstack-mitaka-nova</artifactId>
-  <version>1.9.3-cloudsoft.20160831</version>
+  <version>1.9.3-SNAPSHOT</version>
   <name>jclouds Openstack Mitaka Nova</name>
   <description>OpenStack Nova implementation targeted to Mitaka</description>
   <packaging>bundle</packaging>
 
   <properties>
     <jclouds.groupId>org.apache.jclouds</jclouds.groupId>
+    <jclouds.version>1.9.3</jclouds.version>
     <test.openstack-mitaka-nova.endpoint>https://127.0.0.1/v2.0/</test.openstack-mitaka-nova.endpoint>
     <test.openstack-mitaka-nova.api-version>2</test.openstack-mitaka-nova.api-version>
     <test.openstack-mitaka-nova.build-version />
@@ -42,8 +43,6 @@
     <test.openstack-mitaka-nova.template />
     <jclouds.osgi.export>org.jclouds.openstack.devtest*;version="${project.version}"</jclouds.osgi.export>
     <jclouds.osgi.import>org.jclouds*,*</jclouds.osgi.import>
-    <jclouds.cloudsoft.groupId>io.cloudsoft.jclouds</jclouds.cloudsoft.groupId>
-    <jclouds.cloudsoft.version>1.9.3-cloudsoft.20160725</jclouds.cloudsoft.version>
   </properties>
 
   <dependencies>
@@ -52,9 +51,9 @@
         Exclude it from all other sources. 
     -->
     <dependency>
-      <groupId>${jclouds.cloudsoft.groupId}.api</groupId>
+      <groupId>${jclouds.groupId}.api</groupId>
       <artifactId>openstack-nova</artifactId>
-      <version>${jclouds.cloudsoft.version}</version>
+      <version>${jclouds.version}</version>
     </dependency>
     <dependency>
       <groupId>${jclouds.groupId}.driver</groupId>
@@ -62,7 +61,7 @@
       <version>${project.parent.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.apache.jclouds</groupId>
+          <groupId>${jclouds.groupId}</groupId>
           <artifactId>jclouds-core</artifactId>
         </exclusion>
       </exclusions>
@@ -73,11 +72,11 @@
       <version>${project.parent.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.apache.jclouds</groupId>
+          <groupId>${jclouds.groupId}</groupId>
           <artifactId>jclouds-compute</artifactId>
         </exclusion>
         <exclusion>
-          <groupId>org.apache.jclouds</groupId>
+          <groupId>${jclouds.groupId}</groupId>
           <artifactId>jclouds-core</artifactId>
         </exclusion>
       </exclusions>
@@ -89,30 +88,30 @@
       <artifactId>guice-multibindings</artifactId>
     </dependency>
     <dependency>
-      <groupId>${jclouds.cloudsoft.groupId}</groupId>
+      <groupId>${jclouds.groupId}</groupId>
       <artifactId>jclouds-core</artifactId>
-      <version>${jclouds.cloudsoft.version}</version>
+      <version>${jclouds.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>${jclouds.cloudsoft.groupId}</groupId>
+      <groupId>${jclouds.groupId}</groupId>
       <artifactId>jclouds-compute</artifactId>
-      <version>${jclouds.cloudsoft.version}</version>
+      <version>${jclouds.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>${jclouds.cloudsoft.groupId}.api</groupId>
+      <groupId>${jclouds.groupId}.api</groupId>
       <artifactId>openstack-nova</artifactId>
-      <version>${jclouds.cloudsoft.version}</version>
+      <version>${jclouds.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>${jclouds.cloudsoft.groupId}.api</groupId>
+      <groupId>${jclouds.groupId}.api</groupId>
       <artifactId>openstack-keystone</artifactId>
-      <version>${jclouds.cloudsoft.version}</version>
+      <version>${jclouds.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
@@ -123,7 +122,7 @@
       <scope>test</scope>
       <exclusions>
         <exclusion>
-          <groupId>org.apache.jclouds</groupId>
+          <groupId>${jclouds.groupId}</groupId>
           <artifactId>jclouds-core</artifactId>
         </exclusion>
       </exclusions>
@@ -182,7 +181,7 @@
           <dependency>
             <groupId>org.apache.jclouds</groupId>
             <artifactId>jclouds-resources</artifactId>
-            <version>1.9.2</version>
+            <version>1.9.3</version>
             <scope>compile</scope>
           </dependency>
         </dependencies>
@@ -215,7 +214,7 @@
           <dependency>
             <groupId>org.apache.jclouds</groupId>
             <artifactId>jclouds-resources</artifactId>
-            <version>1.9.2</version>
+            <version>1.9.3</version>
             <scope>compile</scope>
           </dependency>
         </dependencies>
